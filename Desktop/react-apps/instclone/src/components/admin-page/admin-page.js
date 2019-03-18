@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Header = () => {
+import Table from './admin-table';
+import usersData from '../../data/users-data.js';
+import './admin-page.css';
+
+const Admin = () => {
   return(
     <header>
-      <h1>Welcome to InstClone</h1>
+      <h2>Admin Page</h2>
+      <h3>Number of accounts { usersData.length }</h3>
+      <Table />
     </header>
   );
 };
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+ReactDOM.render(<Admin />, document.getElementById('root'));
 
-export default Header;
+export default Admin;
