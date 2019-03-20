@@ -1,0 +1,13 @@
+.post {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  background: #e4e4e4;
+  width: 600px;
+  height: 400px;
+}
+
+img {
+  width: 600px;
+  height: 400px;
+}
