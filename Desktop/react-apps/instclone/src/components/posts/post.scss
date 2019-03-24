@@ -1,0 +1,122 @@
+body {
+  background-color: #e4e4e4;
+}
+
+header {
+  height: 50px;
+  text-align: center;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+  
+  .icon {
+    font-size: 35px;
+  }
+  
+  input {
+    width: 220px;
+    height: 30px;
+    padding-left: 10px;
+    border: 2px solid rgb(71, 62, 62);
+    border-radius: 5px;
+    outline: none;
+    color: #9E9C9C;
+  }
+
+  button {
+    position: relative; 
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: black;
+  }
+
+  .profile-logo {
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+  }
+}
+
+.post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  background: #fff;
+  width: 600px;
+  height: 500px;
+  
+  .post-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    .logo {
+      position: absolute;
+      top: 8px;
+      left: 10px;
+
+      img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+      }
+    }
+
+    .account-name {
+      position: absolute;
+      top: 15px;
+      left: 50px;
+    }
+  }
+
+  .post-image {
+    position: absolute;
+    top: 50px;
+    width: 600px;
+    height: 400px;
+  
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  .post-likes {
+
+  }
+  
+  .post-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+
+

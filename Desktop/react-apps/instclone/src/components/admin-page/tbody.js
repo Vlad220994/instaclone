@@ -9,7 +9,7 @@ const TBody = () => {
     return (
       <tr>
         <td>
-          <TableData data={ item.firstName } />
+          <TableData data={ item.firstName} />
         </td>
         <td>
           <TableData data={ item.lastName } />
@@ -18,10 +18,10 @@ const TBody = () => {
           <TableData data={ item.eMail } />
         </td>
         <td>
-          <TableData data={ item.removeRequest } />
+          
           <button type="button"
                   className="btn btn-outline-danger btn-sm"
-                  disabled={!item.removeRequest}>
+                  disabled={ !item.removeRequest }>
             <i className="fa fa-trash-o"></i>
           </button>
         </td>

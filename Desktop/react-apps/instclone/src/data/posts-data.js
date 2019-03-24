@@ -18,3 +18,5 @@ let postsData = [
     tags: "#qwerty"
   }
 ];
+
+export default postsData;

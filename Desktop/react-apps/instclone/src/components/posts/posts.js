@@ -1,12 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Post from './Post.js';
 
 const Posts = () => {
-  return(
-    <div>Posts</div>
-  );
+  return ( <Post /> );
 };
-
-ReactDOM.render(<Posts />, document.getElementById('root'));
 
 export default Posts;

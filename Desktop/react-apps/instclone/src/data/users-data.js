@@ -10,7 +10,7 @@ let usersData = [{
   firstName: "Petya",
   lastName: "Petrov",
   eMail: "petrov@mail.ru",
-  removeRequest: 0
+  removeRequest: 1
 },
 {
   id: "3",

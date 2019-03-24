@@ -5,7 +5,7 @@ import { BrowserRouter as  Router, Switch, Route } from 'react-router-dom';
 import Login from './components/auth/login';
 import Register from './components/auth/register';
 import Admin from './components/admin-page/admin-page';
-import Posts from './components/posts/posts';
+import AllPosts from './components/posts/AllPosts';
 
 const Root = () => {
   return (
@@ -15,7 +15,7 @@ const Root = () => {
         <Route path="/login" component={ Login } />
         <Route path="/register" component={ Register } />
         <Route path="/admin" component={ Admin } />
-        <Route path="/posts" component={ Posts } />
+        <Route path="/posts" component={ AllPosts } />
       </Switch>
     </Router>);
 };

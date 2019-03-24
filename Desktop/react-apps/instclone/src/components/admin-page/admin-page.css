@@ -2,6 +2,13 @@ header {
   text-align: center;
 }
 
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
 .table {
   margin: 0 auto;
   width: 600px;
