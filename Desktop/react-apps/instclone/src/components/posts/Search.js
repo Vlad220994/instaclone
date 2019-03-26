@@ -5,7 +5,7 @@ const Search = () => {
     <div className="search">
       <form>
         <input type="search" placeholder="Search" className="input" />
-        <button type="submit"></button>
+        <button className="btn-search" type="submit"></button>
       </form>
     </div>
   );

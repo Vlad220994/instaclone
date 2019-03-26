@@ -13,8 +13,8 @@ const Post = () => {
       <article className="post">
         <Account />
         <Image data={ item.picture } alt={ item.id } />
-        <PostText data={ item.text } />
         <Likes />
+        <PostText data={ item.text } />
       </article>
     );
   });

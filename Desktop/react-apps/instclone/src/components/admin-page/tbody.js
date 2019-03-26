@@ -18,7 +18,6 @@ const TBody = () => {
           <TableData data={ item.eMail } />
         </td>
         <td>
-          
           <button type="button"
                   className="btn btn-outline-danger btn-sm"
                   disabled={ !item.removeRequest }>

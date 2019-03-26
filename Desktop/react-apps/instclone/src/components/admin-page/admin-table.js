@@ -2,6 +2,7 @@ import React from 'react';
 
 import THead from './thead';
 import TBody from './tbody';
+import usersData from '../../data/users-data';
 import './admin-page.css';
 
 const Table = () => {
@@ -12,5 +13,7 @@ const Table = () => {
     </table>
   );
 };
+
+localStorage.setItem(usersData, JSON.stringify(usersData));
 
 export default Table;
