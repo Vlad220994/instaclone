@@ -1,10 +1,10 @@
 import React from 'react';
 
 import TableData from './table-data';
-import usersData from '../../data/users-data';
 import './admin-page.css';
 
 const TBody = () => {
+  const usersData = JSON.parse(localStorage.getItem('usersData'));
   const elements = usersData.map((item) => {
     return (
       <tr key={item.id}>

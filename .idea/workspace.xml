@@ -1,68 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc75cd7c-7f15-49b2-8b4c-6960c2ba386b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/instaclone.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/admin-page/admin-page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/admin-page/admin-page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/admin-page/admin-table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/admin-page/table-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/table-data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/admin-page/tbody.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/admin-page/thead.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/thead.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/auth/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/auth/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/all-posts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/post-comments.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/post-footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/post-header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/post-image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/post-likes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/post-text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/post.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/components/posts/posts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/data/posts-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/posts-data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/data/users-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/users-data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/inst/instaclone/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/admin-page/admin-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/admin-page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/admin-page/admin-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/admin-page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/admin-page/admin-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/admin-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/admin-page/table-data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/admin-page/tbody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/tbody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/admin-page/thead.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/auth/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/auth/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/AccLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/AccLogo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/AccountName.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/AccountName.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/AllPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/AllPosts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/Comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/Likes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Likes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/PostText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/PostText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/RenderPropsMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/RenderPropsMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/post.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/components/posts/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/data/posts-data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/data/users-data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desktop/react-apps/instclone/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    <list default="true" id="dc75cd7c-7f15-49b2-8b4c-6960c2ba386b" name="Default Changelist" comment="changed directory structure&#10;corrected errors">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin-page/admin-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/admin-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin-page/admin-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/admin-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin-page/tbody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin-page/tbody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -78,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/posts/Posts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -88,19 +35,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/admin-page/tbody.js">
+        <entry file="file://$PROJECT_DIR$/src/components/admin-page/admin-table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/posts/Likes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="68">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -108,19 +46,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="146">
+              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/auth/register.js">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -135,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/admin-page/admin-page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="102">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="17" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -145,24 +91,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/posts/AllPosts.js">
+        <entry file="file://$PROJECT_DIR$/src/components/admin-page/tbody.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="136">
+              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/posts/AccLogo.js">
+        <entry file="file://$PROJECT_DIR$/src/components/posts/Post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="102">
+              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/posts/AllPosts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,6 +135,8 @@
       <find>class=</find>
       <find>Context</find>
       <find>/Post</find>
+      <find>usersData</find>
+      <find>localStorage</find>
     </findStrings>
     <dirStrings>
       <dir>C:\JBLicense\instaclone\src</dir>
@@ -188,14 +149,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/posts/Post.js" />
-        <option value="$PROJECT_DIR$/src/components/admin-page/tbody.js" />
         <option value="$PROJECT_DIR$/src/components/posts/Likes.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/auth/register.js" />
         <option value="$PROJECT_DIR$/src/components/auth/login.js" />
-        <option value="$PROJECT_DIR$/src/components/admin-page/admin-page.js" />
         <option value="$PROJECT_DIR$/src/components/posts/AllPosts.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/components/posts/Posts.js" />
+        <option value="$PROJECT_DIR$/src/components/posts/Post.js" />
+        <option value="$PROJECT_DIR$/src/components/admin-page/admin-table.js" />
+        <option value="$PROJECT_DIR$/src/components/admin-page/admin-page.js" />
+        <option value="$PROJECT_DIR$/src/components/admin-page/tbody.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -232,24 +196,6 @@
               <item name="instaclone" type="b2602c69:ProjectViewProjectNode" />
               <item name="instaclone" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="instaclone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="instaclone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="instaclone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="instaclone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="instaclone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="instaclone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,22 +235,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553755409002</updated>
-      <workItem from="1553755411256" duration="2853000" />
+      <workItem from="1553755411256" duration="5337000" />
     </task>
+    <task id="LOCAL-00001" summary="changed directory structure&#10;corrected errors">
+      <created>1553758809980</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553758809980</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2853000" />
+    <option name="totallyTimeSpent" value="5337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -321,24 +276,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed directory structure&#10;corrected errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed directory structure&#10;corrected errors" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/posts/Post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/admin-page/tbody.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/posts/Likes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -346,47 +288,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/posts/Posts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/auth/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/auth/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/admin-page/admin-page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,10 +304,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/posts/AllPosts.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/auth/login.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin-page/admin-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/posts/Posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/posts/Post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin-page/admin-page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin-page/tbody.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

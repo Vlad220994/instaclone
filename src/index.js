@@ -7,6 +7,9 @@ import Register from './components/auth/register';
 import Admin from './components/admin-page/admin-page';
 import AllPosts from './components/posts/AllPosts';
 import { Redirect } from "react-router-dom";
+import postsData from "./data/posts-data";
+
+localStorage.setItem('postsData', JSON.stringify(postsData));
 
 const Root = () => {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Table from './admin-table';
-import usersData from '../../data/users-data.js';
 import './admin-page.css';
 
 const Admin = () => {
+  const usersData = JSON.parse(localStorage.getItem('usersData'));
   return(
     <header className="sticky">
       <h2>Admin Page</h2>

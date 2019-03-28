@@ -4,10 +4,10 @@ import Account from './Account';
 import Image from './Image';
 import PostText from './PostText';
 import Likes from './Likes';
-import postsData from '../../data/posts-data';
 import './post.scss';
 
 const Post = () => {
+  const postsData = JSON.parse(localStorage.getItem('postsData'));
   const elements = postsData.map((item) => {
     return (
       <article className="post" key={item.id}>

@@ -14,6 +14,6 @@ const Table = () => {
   );
 };
 
-localStorage.setItem(usersData, JSON.stringify(usersData));
+localStorage.setItem('usersData', JSON.stringify(usersData));
 
 export default Table;
