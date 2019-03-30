@@ -1,18 +1,20 @@
 import React from 'react';
 
 import Header from './Header';
-import Posts from './Posts';
+import Post from './Post';
 import Footer from './Footer';
 
 
-const AllPosts = () => {
-  return(
-    <div className="all-posts">
-      <Header />
-      <Posts />
-      <Footer />
-    </div>
-  );
-};
+const AllPosts = () => ( <
+  div className = "all-posts" >
+  <
+  Header / >
+  <
+  Post / >
+  <
+  Footer / >
+  <
+  /div>
+);
 
 export default AllPosts;

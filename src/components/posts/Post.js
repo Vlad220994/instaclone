@@ -8,20 +8,34 @@ import './post.scss';
 
 const Post = () => {
   const postsData = JSON.parse(localStorage.getItem('postsData'));
-  const elements = postsData.map((item) => {
-    return (
-      <article className="post" key={item.id}>
-        <Account />
-        <Image data={ item.picture } alt={ item.id } />
-        <Likes />
-        <PostText data={ item.text } />
-      </article>
-    );
-  });
-  return (
-    <div className="posts">
-      { elements }
-    </div>
+  const elements = postsData.map(item => ( <
+    article className = "post"
+    key = {
+      item.id
+    } >
+    <
+    Account / >
+    <
+    Image data = {
+      item.picture
+    }
+    alt = {
+      item.id
+    }
+    /> <
+    Likes / >
+    <
+    PostText data = {
+      item.text
+    }
+    /> <
+    /article>
+  ));
+  return ( <
+    div className = "posts" > {
+      elements
+    } <
+    /div>
   );
 };
 

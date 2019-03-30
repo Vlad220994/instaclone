@@ -9,7 +9,8 @@ header {
   z-index: 1;
   margin: 0 auto;
 }
-.all-posts{
+
+.all-posts {
   display: block;
 
   .header-main {
@@ -21,11 +22,11 @@ header {
     height: 60px;
     background: #fff;
     z-index: 2;
-    
+
     .icon {
       font-size: 35px;
     }
-    
+
     input {
       width: 220px;
       height: 30px;
@@ -35,23 +36,23 @@ header {
       outline: none;
       color: #9E9C9C;
     }
-  
+
     button {
-      position: relative; 
+      position: relative;
       width: 30px;
       height: 30px;
       border: none;
       background: rgb(255, 255, 255);
       cursor: pointer;
     }
-  
+
     .btn-search:before {
       content: "\f002";
       font-family: FontAwesome;
       font-size: 16px;
       color: black;
     }
-  
+
     .profile-photo {
       width: 35px;
       height: 35px;
@@ -64,14 +65,14 @@ header {
 
 #render-props-menu {
   top: 35px;
-  left:40px;
-  
+  left: 40px;
+
   li {
-    background-color: #fff; 
+    background-color: #fff;
   }
 
   li:hover {
-    background-color: rgb(42, 213, 243); 
+    background-color: rgb(42, 213, 243);
   }
 }
 
@@ -86,7 +87,7 @@ header {
   width: 600px;
   height: 500px;
   border-radius: 10px;
-  
+
   .post-header {
     position: absolute;
     top: 0px;
@@ -116,7 +117,7 @@ header {
     top: 50px;
     width: 600px;
     height: 400px;
-  
+
     img {
       width: 100%;
       height: auto;
@@ -132,7 +133,7 @@ header {
     font-size: 17px;
 
   }
-  
+
   .post-text {
     position: absolute;
     bottom: 10px;
