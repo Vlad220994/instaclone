@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {
+  Redirect,
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from 'react-router-dom';
-import {
-  Redirect
-} from 'react-router-dom';
+
 import Login from './components/auth/login';
 import Register from './components/auth/register';
 import AdminPage from './components/admin-page/AdminPage';
@@ -26,8 +25,7 @@ const Root = () => ( <
   Route path = "/"
   render = {
     () => ( <
-      Redirect to = "/login" / >
-    )
+      Redirect to = "/login" / > )
   }
   exact /
   >
