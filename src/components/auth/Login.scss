@@ -1,0 +1,21 @@
+.login-form, .register-form {
+  display: block;
+  margin: 100px auto;
+  width: 300px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 0;
+
+  .fa-camera {
+    font-size: 60px;
+  }
+  
+  input {
+    width: 220px;
+  }
+
+  .to-registration {
+    margin-top: 10px; 
+  }
+}

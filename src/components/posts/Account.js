@@ -1,12 +1,13 @@
 import React from 'react';
 
-import AccLogo from './AccLogo';
-import AccountName from './AccountName';
-
 const Account = () => (
   <header className="post-header">
-    <AccLogo />
-    <AccountName />
+    <div className="logo">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-372-456324.png" alt="logo" />
+    </div>
+    <div className="account-name">
+      AccountName
+    </div>
   </header>
 );
 

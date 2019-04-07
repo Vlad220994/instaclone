@@ -4,7 +4,6 @@ import Header from './Header';
 import Post from './Post';
 import Footer from './Footer';
 
-
 const AllPosts = () => (
   <div className="all-posts">
     <Header />

@@ -1,9 +1,6 @@
 import React from 'react';
 
 import Account from './Account';
-import Image from './PostImage';
-import PostText from './PostText';
-import Likes from './Likes';
 import './post.scss';
 
 const Post = () => {
@@ -11,9 +8,17 @@ const Post = () => {
   const elements = postsData.map(item => (
     <article className="post" key={item.id}>
       <Account />
-      <Image data={item.picture} alt={item.id} />
-      <Likes />
-      <PostText data={item.text} />
+      <div className="post-image">
+        <img src={item.picture} alt="fsd" />
+      </div>
+      <div className="post-likes">
+        <i className="fa fa-heart-o" />
+        {' '}
+        Likes
+      </div>
+      <div className="post-text">
+        {item.text}
+      </div>
     </article>
   ));
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
   <footer>
-    ©2019 INSTACLONE
+    © 2019 INSTACLONE
   </footer>
 );
 

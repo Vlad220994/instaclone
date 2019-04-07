@@ -1,0 +1,27 @@
+.admin-page {
+  text-align: center;
+
+  .header-main {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .table {
+    margin: 0 auto;
+    width: 600px;
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: rgb(163, 72, 72);
+      z-index: 1;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+
+
+
+
