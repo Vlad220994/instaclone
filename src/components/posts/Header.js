@@ -6,6 +6,7 @@ const Header = () => (
   <header className="header-main">
     <i className="fa fa-camera icon" />
     <Search />
+    <div className="avatar"></div>
   </header>
 );
 

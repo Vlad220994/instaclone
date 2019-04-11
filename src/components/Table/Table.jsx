@@ -4,10 +4,10 @@ import THead from './THead';
 import TBody from './TBody';
 
 
-const Table = (props) => (
+const Table = data => (
   <table className="table">
     <THead />
-    <TBody data={props.data}/>
+    <TBody data={data} />
   </table>
 );
 

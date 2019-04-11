@@ -63,37 +63,18 @@ header {
   }
 }
 
-#render-props-menu {
-  top: 35px;
-  left: 40px;
-
-  li {
-    background-color: #fff;
-  }
-
-  li:hover {
-    background-color: rgb(42, 213, 243);
-  }
-}
-
 .post {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   position: relative;
   margin: 20px auto;
-  text-align: center;
   background: #fff;
   width: 600px;
-  height: 500px;
   border-radius: 10px;
 
-  .post-header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+  .post-user {
+    width: 100%;
 
-    .logo {
+    .post-user-avatar {
       position: absolute;
       top: 8px;
       left: 10px;
@@ -105,7 +86,7 @@ header {
       }
     }
 
-    .account-name {
+    .post-user-nickname {
       position: absolute;
       top: 15px;
       left: 50px;
@@ -113,8 +94,7 @@ header {
   }
 
   .post-image {
-    position: absolute;
-    top: 50px;
+    display: block;
     width: 600px;
     height: 400px;
 
@@ -127,17 +107,36 @@ header {
   }
 
   .post-likes {
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
+    display: block;
+    width: 100%;
+    z-index: 1;
     font-size: 17px;
 
+    .likes {
+      margin: 10px;
+      width: 24px;
+      height: 24px;
+      background-image: url('../img/sprites.png');
+      background-size: 282px 248px;
+      background-position: 0 -199px;
+      background-repeat: no-repeat;
+      border: 0;
+    }
+    
+    .fa-heart-o {
+      margin: 10px; 
+    }
   }
 
-  .post-text {
-    position: absolute;
-    bottom: 10px;
-    left: 100px;
+  .post-caption {
+    display: inline-block;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+
+    span {
+      width: 90%;
+      margin-left: 10px;
+    }
   }
 }
 

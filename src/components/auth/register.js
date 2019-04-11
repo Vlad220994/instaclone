@@ -6,7 +6,7 @@ const Register = () => (
       <i className="fa fa-camera" />
     </div>
     <div>
-      <h1>instaclone</h1>
+      <h1>InstaClone</h1>
     </div>
     <div className="form-group">
       <input type="text" placeholder="First Name" />

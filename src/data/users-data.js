@@ -4,6 +4,13 @@ const usersData = [{
   lastName: 'Ivanov',
   eMail: 'ivan1994@mail.ru',
   removeRequest: 1,
+  nickname: 'IvanChai',
+  avatar: '',
+  post: [{
+    id: '1',
+    image: '',
+    caption: '',
+  }],
 },
 {
   id: '2',

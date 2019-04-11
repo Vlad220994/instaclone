@@ -1,31 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import Account from './Account';
 import './post.scss';
 
-const Post = () => {
-  const postsData = JSON.parse(localStorage.getItem('postsData'));
-  const elements = postsData.map(item => (
-    <article className="post" key={item.id}>
-      <Account />
-      <div className="post-image">
-        <img src={item.picture} alt="fsd" />
-      </div>
-      <div className="post-likes">
-        <i className="fa fa-heart-o" />
-        {' '}
-        Likes
-      </div>
-      <div className="post-text">
-        {item.text}
-      </div>
-    </article>
-  ));
-  return (
-    <div className="posts">
-      {elements}
-    </div>
-  );
-};
+// eslint-disable-next-line react/prefer-stateless-function
+class Post extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render () {
+    const {nickname, avatar, image, caption} = this.props;
+
+    return (
+      <article className="post">
+        <header className="post-user">
+          <div className="post-user-avatar">
+            <img src={avatar} alt={nickname} />
+          </div>
+          <div className="post-user-nickname">
+            <span>{nickname}</span>
+          </div>
+        </header>
+        <div className="post-image">
+          <img src={image} alt={nickname} />
+        </div>
+        <div className="post-likes">
+          <button className="likes" type="submit">
+            <span className="like" aria-label="like" />
+          </button>
+          <span>Likes</span>
+        </div>
+        <div className="post-caption">
+          <strong>{nickname}</strong>
+          <span>{caption}</span>
+        </div>
+      </article>
+    );
+  }
+}
 
 export default Post;
