@@ -8,6 +8,64 @@ header {
   text-align: center;
   z-index: 1;
   margin: 0 auto;
+
+  $border-radius: 3px;
+  $primary: #f2f2f2;
+  $animation: pulse;
+
+  .profile-dropdown {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+  
+    input[type="checkbox"] {
+      display: none;
+      &:checked {
+        & ~ ul {
+          display: block;
+          animation: $animation .1s;
+        }
+      }
+    }
+    
+    img {
+      display: inline-block;
+      height: 2.5rem;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+    
+    ul {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0px;
+      width: 175px;
+      border-radius: $border-radius;
+
+      li {
+        span {
+          display: inline-block;
+          padding: .75rem 1rem;
+        }
+        a {
+          display: block;
+          padding: .75rem 1rem;
+          text-decoration: none;
+          color: darken($primary ,50%);
+          font-size: 1rem;
+          
+          &:hover {
+            background: rgb(59, 240, 180);
+          }
+        }
+      }
+    }
+  }
 }
 
 .all-posts {
@@ -121,8 +179,15 @@ header {
       background-position: 0 -199px;
       background-repeat: no-repeat;
       border: 0;
+      outline: none;
     }
-    
+
+    .likes-done {
+      background-position: -208px -151px;
+    }
+    span {
+      margin-top: 10px; 
+    }
     .fa-heart-o {
       margin: 10px; 
     }

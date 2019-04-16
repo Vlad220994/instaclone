@@ -1,6 +1,9 @@
 import React from 'react';
 
+import usersData from '../../data/users-data';
 import './Login.scss';
+
+localStorage.setItem('usersData', JSON.stringify(usersData));
 
 const Login = () => (
   <form className="login-form">

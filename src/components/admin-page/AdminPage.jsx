@@ -9,7 +9,7 @@ const AdminPage = () => {
     <div className="admin-page">
       <header className="header-main">
         <h2>Admin Page</h2>
-        <h3>{`Number of accounts ${usersData.length}`}</h3>
+        <h3>{`Number of accounts ${JSON.parse(localStorage.getItem('usersData')).length}`}</h3>
       </header>
       <Table data={usersData} />
     </div>

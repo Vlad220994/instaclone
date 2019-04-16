@@ -1,34 +1,32 @@
 import React from 'react';
+import TableRowItem from './TableRowItem';
 
-const TBody = (props) => {
-  return (
-    <tbody>
-      {
-        props.data.map(item => (
-          <tr key={item.id}>
-            <td>
-              {item.firstName}
-            </td>
-            <td>
-              {item.lastName}
-            </td>
-            <td>
-              {item.eMail}
-            </td>
-            <td>
-              <button
-                type="button"
-                className="btn btn-outline-danger btn-sm"
-                disabled={!item.removeRequest}
-              >
-                <i className="fa fa-trash-o" />
-              </button>
-            </td>
+const TBody = ({ data, onDeleted }) => (
+  <tbody>
+    {
+      data.map((item) => {
+        const {
+          id,
+          firstName,
+          lastName,
+          eMail,
+          removeRequest,
+        } = item;
+
+        return (
+          <tr key={id} className="table-row">
+            <TableRowItem
+              firstName={firstName}
+              lastName={lastName}
+              eMail={eMail}
+              removeRequest={removeRequest}
+              onDeleted={() => onDeleted(id)}
+            />
           </tr>
-        ))
-      }
-    </tbody>
-  );
-};
+        );
+      })
+    }
+  </tbody>
+);
 
 export default TBody;

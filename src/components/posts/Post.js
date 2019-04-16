@@ -2,14 +2,26 @@ import React, { Component } from 'react';
 
 import './post.scss';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class Post extends Component {
-  constructor(props) {
-    super(props);
-  }
+export default class Post extends Component {
+  state = {
+    done: false,
+  };
 
-  render () {
-    const {nickname, avatar, image, caption} = this.props;
+  onLikeClick = () => {
+    this.setState(({ done }) => ({
+      done: !done,
+    }));
+  };
+
+  render() {
+    const { nickname, avatar, image, caption } = this.props;
+    const { done } = this.state;
+
+    let classNames = 'likes';
+
+    if (done) {
+      classNames += ' likes-done';
+    }
 
     return (
       <article className="post">
@@ -25,7 +37,11 @@ class Post extends Component {
           <img src={image} alt={nickname} />
         </div>
         <div className="post-likes">
-          <button className="likes" type="submit">
+          <button
+            className={classNames}
+            type="button"
+            onClick={this.onLikeClick}
+          >
             <span className="like" aria-label="like" />
           </button>
           <span>Likes</span>
@@ -38,5 +54,3 @@ class Post extends Component {
     );
   }
 }
-
-export default Post;
