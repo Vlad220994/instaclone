@@ -15,11 +15,11 @@ export default class Table extends Component {
       item.id !== id
     ));
     this.setState(
-      { data: newData }, 
+      { data: newData },
       () => (localStorage.setItem('usersData', JSON.stringify(newData)))
     );
   }
-  
+
   render() {
     const { data } = this.state;
     return (

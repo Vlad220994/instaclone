@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => (
   <form className="register-form">
@@ -24,6 +25,11 @@ const Register = () => (
       <input type="password" placeholder="Confirm password" />
     </div>
     <button type="submit" className="btn btn-primary btn-left">Sign up</button>
+    <div className="to-registration">
+      Already registered?
+      {' '}
+      <Link to="/login">Login</Link>
+    </div>
   </form>
 );
 

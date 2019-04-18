@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import usersData from '../../data/users-data';
 import './Login.scss';
 
@@ -23,7 +25,7 @@ const Login = () => (
     <div className="to-registration">
       First time on InstaClone?
       {' '}
-      <a href="register">Registration</a>
+      <Link to="/register">Registration</Link>
     </div>
   </form>
 );

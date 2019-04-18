@@ -174,10 +174,11 @@ header {
       margin: 10px;
       width: 24px;
       height: 24px;
-      background-image: url('../img/sprites.png');
+      background-image: url('../../img/sprites.png');
       background-size: 282px 248px;
       background-position: 0 -199px;
       background-repeat: no-repeat;
+      background-color: transparent;
       border: 0;
       outline: none;
     }
