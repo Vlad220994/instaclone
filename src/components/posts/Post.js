@@ -36,15 +36,26 @@ export default class Post extends Component {
         <div className="post-image">
           <img src={image} alt={nickname} />
         </div>
-        <div className="post-likes">
-          <button
-            className={classNames}
-            type="button"
-            onClick={this.onLikeClick}
-          >
-            <span className="like" aria-label="like" />
-          </button>
-          <span>Likes</span>
+        <div>
+          <div className="post-likes">
+            <button
+              className={classNames}
+              type="button"
+              onClick={this.onLikeClick}
+            >
+              <span className="like" aria-label="like" />
+            </button>
+            <span>Likes</span>
+          </div>
+          <div className="post-delete">
+            <button
+              className={classNames}
+              type="button"
+              onClick={this.onDeleteClick}
+            >
+              <span className="like" aria-label="like" />
+            </button>
+          </div>
         </div>
         <div className="post-caption">
           <strong>{nickname}</strong>

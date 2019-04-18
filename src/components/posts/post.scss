@@ -2,125 +2,6 @@ body {
   background-color: #e4e4e4;
 }
 
-header {
-  display: flex;
-  height: 50px;
-  text-align: center;
-  z-index: 1;
-  margin: 0 auto;
-
-  $border-radius: 3px;
-  $primary: #f2f2f2;
-  $animation: pulse;
-
-  .profile-dropdown {
-    display: inline-block;
-    position: relative;
-    margin: auto;
-  
-    input[type="checkbox"] {
-      display: none;
-      &:checked {
-        & ~ ul {
-          display: block;
-          animation: $animation .1s;
-        }
-      }
-    }
-    
-    img {
-      display: inline-block;
-      height: 2.5rem;
-      vertical-align: middle;
-      border-radius: 50%;
-    }
-    
-    ul {
-      display: none;
-      list-style: none;
-      padding: 0;
-      margin-top: 15px;
-      background: #fff;
-      position: absolute;
-      top: 100%;
-      right: 0px;
-      width: 175px;
-      border-radius: $border-radius;
-
-      li {
-        span {
-          display: inline-block;
-          padding: .75rem 1rem;
-        }
-        a {
-          display: block;
-          padding: .75rem 1rem;
-          text-decoration: none;
-          color: darken($primary ,50%);
-          font-size: 1rem;
-          
-          &:hover {
-            background: rgb(59, 240, 180);
-          }
-        }
-      }
-    }
-  }
-}
-
-.all-posts {
-  display: block;
-
-  .header-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: sticky;
-    top: 0;
-    height: 60px;
-    background: #fff;
-    z-index: 2;
-
-    .icon {
-      font-size: 35px;
-    }
-
-    input {
-      width: 220px;
-      height: 30px;
-      padding-left: 10px;
-      border: 2px solid rgb(71, 62, 62);
-      border-radius: 5px;
-      outline: none;
-      color: #9E9C9C;
-    }
-
-    button {
-      position: relative;
-      width: 30px;
-      height: 30px;
-      border: none;
-      background: rgb(255, 255, 255);
-      cursor: pointer;
-    }
-
-    .btn-search:before {
-      content: "\f002";
-      font-family: FontAwesome;
-      font-size: 16px;
-      color: black;
-    }
-
-    .profile-photo {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-    }
-  }
-}
-
 .post {
   display: block;
   position: relative;
@@ -131,6 +12,7 @@ header {
 
   .post-user {
     width: 100%;
+    height: 50px;
 
     .post-user-avatar {
       position: absolute;
@@ -154,7 +36,6 @@ header {
   .post-image {
     display: block;
     width: 600px;
-    height: 400px;
 
     img {
       width: 100%;
@@ -165,8 +46,8 @@ header {
   }
 
   .post-likes {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 50%;
     z-index: 1;
     font-size: 17px;
 
@@ -191,6 +72,23 @@ header {
     }
     .fa-heart-o {
       margin: 10px; 
+    }
+  }
+
+  .post-delete {
+    display: inline-block;
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    z-index: 1;
+
+    button {
+      background: url('../../img/sprites.png') no-repeat -5px -234px;
+      background-size: 282px 248px;
+      width: 14px;
+      height: 10px;
+      border: 0;
+      outline: none;
     }
   }
 

@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Search from './Search';
+import Search from '../posts/Search';
+import './header.scss';
 
 const Header = () => (
   <header className="header-main">
-    <i className="fa fa-camera icon" />
+    <Link to="/posts">
+      <i className="fa fa-camera icon" />
+    </Link>
     <Search />
     <div className="profile">
       <div className="half">

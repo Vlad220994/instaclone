@@ -1,0 +1,98 @@
+.header-main {
+  display: flex;
+  height: 60px;
+  text-align: center;
+  z-index: 1;
+  margin: 0 auto;
+  background-color: white; 
+  align-items: center;
+  justify-content: space-around;
+
+  $border-radius: 3px;
+  $primary: #f2f2f2;
+  $animation: pulse;
+
+  .fa-camera {
+    font-size: 35px;
+  }
+
+  input {
+    width: 220px;
+    height: 30px;
+    padding-left: 10px;
+    border: 2px solid rgb(71, 62, 62);
+    border-radius: 5px;
+    outline: none;
+    color: #9E9C9C;
+  }
+
+  button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  .btn-search:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: black;
+  }
+
+  .profile-dropdown {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+  
+    input[type="checkbox"] {
+      display: none;
+      &:checked {
+        & ~ ul {
+          display: block;
+          animation: $animation .1s;
+        }
+      }
+    }
+    
+    img {
+      display: inline-block;
+      height: 2.5rem;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+    
+    ul {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0px;
+      width: 175px;
+      border-radius: $border-radius;
+
+      li {
+        span {
+          display: inline-block;
+          padding: .75rem 1rem;
+        }
+        a {
+          display: block;
+          padding: .75rem 1rem;
+          text-decoration: none;
+          color: darken($primary ,50%);
+          font-size: 1rem;
+          
+          &:hover {
+            background: rgb(59, 240, 180);
+          }
+        }
+      }
+    }
+  }
+}
