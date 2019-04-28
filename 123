@@ -1,0 +1,44 @@
+<div className="post-delete">
+  <button
+    className={classNames}
+    type="button"
+    value="open"
+    onClick={this.openModal}
+  >
+    <Modal visible={visible} width="300" height="300" effect="fadeInUp" onClickAway={() => this.closeModal}>
+      <div>
+        <h1>Delete Post</h1>
+        <p>Do you want to delete this post?</p>
+        <Link href="" onClick={() => this.closeModal}>Close</Link>
+      </div>
+    </Modal>
+  </button>
+</div>
+
+Post
+  state = {
+    postData: [
+      {
+        id: 1,
+        nickname: 'Ivan',
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR82xOHo6gtgaRIF0N96voETDCZ4sjR1NAni5HQz3phHfq_SSGZqA',
+        caption: 'Hello',
+        image: 'http://static1.squarespace.com/static/58d94e54b3db2b57ce97c524/58daa04bb3db2b38d4674feb/5a8b721f71c10b584549bef8/1550014169797/How-To-Instagram-Pics-Travel-1500x1000.jpg?format=1500w'
+      },
+    ],
+  };
+
+  deletePost = (id) => {
+    this.setState(({ postData }) => {
+      const idx = postData.findIndex(el => el.id === id);
+
+      const newArray = [
+        ...postData.slice(0, idx),
+        ...postData.slice(idx + 1),
+      ];
+      postData.splice(idx, 1);
+      return {
+        postData: newArray,
+      };
+    });
+  };

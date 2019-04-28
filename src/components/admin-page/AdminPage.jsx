@@ -5,7 +5,6 @@ import Table from '../Table/Table';
 import './admin-page.scss';
 
 const AdminPage = () => {
-
   const usersData = JSON.parse(localStorage.getItem('usersData'));
 
   return (

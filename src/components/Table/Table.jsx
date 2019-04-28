@@ -16,7 +16,7 @@ export default class Table extends Component {
     ));
     this.setState(
       { data: newData },
-      () => (localStorage.setItem('usersData', JSON.stringify(newData)))
+      () => (localStorage.setItem('usersData', JSON.stringify(newData))),
     );
   }
 

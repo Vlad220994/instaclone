@@ -3,8 +3,8 @@ const usersData = [{
   firstName: 'Ivan',
   lastName: 'Ivanov',
   eMail: 'ivan1994@mail.ru',
+  password: 'qwerty',
   removeRequest: 1,
-  nickname: 'IvanChai',
   avatar: '',
   post: [{
     id: '1',

@@ -32,30 +32,27 @@ export default class Post extends Component {
           <div className="post-user-nickname">
             <span>{nickname}</span>
           </div>
-        </header>
-        <div className="post-image">
-          <img src={image} alt={nickname} />
-        </div>
-        <div>
-          <div className="post-likes">
-            <button
-              className={classNames}
-              type="button"
-              onClick={this.onLikeClick}
-            >
-              <span className="like" aria-label="like" />
-            </button>
-            <span>Likes</span>
-          </div>
           <div className="post-delete">
             <button
               className={classNames}
               type="button"
-              onClick={this.onDeleteClick}
-            >
-              <span className="like" aria-label="like" />
-            </button>
+              value="open"
+              onClick={this.openModal}
+            />
           </div>
+        </header>
+        <div className="post-image">
+          <img src={image} alt={nickname} />
+        </div>
+        <div className="post-likes">
+          <button
+            className={classNames}
+            type="button"
+            onClick={this.onLikeClick}
+          >
+            <span className="like" aria-label="like" />
+          </button>
+          <span>Likes</span>
         </div>
         <div className="post-caption">
           <strong>{nickname}</strong>

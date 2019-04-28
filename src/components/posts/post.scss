@@ -31,6 +31,24 @@ body {
       top: 15px;
       left: 50px;
     }
+
+    .post-delete {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      z-index: 1;
+  
+      button {
+        background: url('../../img/sprites.png') no-repeat -5px -234px;
+        background-size: 282px 248px;
+        width: 14px;
+        height: 10px;
+        border: 0;
+        outline: none;
+      }
+    }
+
+    
   }
 
   .post-image {
@@ -72,23 +90,6 @@ body {
     }
     .fa-heart-o {
       margin: 10px; 
-    }
-  }
-
-  .post-delete {
-    display: inline-block;
-    position: absolute;
-    bottom: 8%;
-    right: 5%;
-    z-index: 1;
-
-    button {
-      background: url('../../img/sprites.png') no-repeat -5px -234px;
-      background-size: 282px 248px;
-      width: 14px;
-      height: 10px;
-      border: 0;
-      outline: none;
     }
   }
 
