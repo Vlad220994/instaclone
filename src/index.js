@@ -6,7 +6,7 @@ import Provider from "react-redux/es/components/Provider";
 import store from "./redux";
 import App from "./App";
 
-localStorage.setItem('postsData', JSON.stringify(postsData));
+//localStorage.setItem('postsData', JSON.stringify(postsData));
 
 const Root = () => (
     <Provider store = {store}>

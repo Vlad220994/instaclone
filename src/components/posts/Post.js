@@ -14,7 +14,7 @@ export default class Post extends Component {
   };
 
   render() {
-    const { nickname, avatar, image, caption } = this.props;
+    const { nickname, avatar, image, caption, tags } = this.props;
     const { done } = this.state;
 
     let classNames = 'likes';
@@ -58,6 +58,9 @@ export default class Post extends Component {
           <strong>{nickname}</strong>
           <span>{caption}</span>
         </div>
+          <div className="post-tags">
+              <strong>{tags}</strong>
+          </div>
       </article>
     );
   }
