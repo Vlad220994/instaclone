@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './newPost.scss';
 
 export default class NewPost extends Component {
   state = {
@@ -47,12 +48,39 @@ export default class NewPost extends Component {
       const { picture, text, tags } = this.state;
 
       return (
-        <form>
-          <input type="input" name="picture" value={picture} onChange={this.pictureChange} />
-          <input type="input" name="text" value={text} onChange={this.textChange} />
-          <input type="input" name="tags" value={tags} onChange={this.tagsChange} />
-          <button type="submit" onClick={this.handleClick}>Add post</button>
-        </form>
+        <div className="add-post">
+          <form className="">
+            <div>
+              <input
+                name="picture"
+                placeholder="Picture link"
+                value={picture}
+                onChange={this.pictureChange}
+              />
+            </div>
+            <div>
+              <input
+                name="text"
+                placeholder="Text"
+                value={text}
+                onChange={this.textChange}
+              />
+            </div>
+            <div>
+              <input
+                name="tags"
+                placeholder="Tags"
+                value={tags}
+                onChange={this.tagsChange}
+              />
+            </div>
+            <div className="add-post-button">
+              <button className="btn" type="submit" onClick={this.handleClick}>
+                <i className="fa fa-plus-circle" />
+              </button>
+            </div>
+          </form>
+        </div>
       );
     }
 }

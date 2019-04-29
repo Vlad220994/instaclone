@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
 
 import Header from '../Header/Header';
 import Post from './Post';
 import Footer from './Footer';
-import NewPost from '../newPost/newPost';
+import NewPost from '../NewPost/NewPost';
 
 import '../../data/posts-data';
 
@@ -11,7 +11,6 @@ export default class AllPosts extends Component {
     state = {
       posts: JSON.parse(localStorage.getItem('postsData')),
     };
-
 
     handleUpdate = (newPostsData) => {
       this.setState({ posts: newPostsData });

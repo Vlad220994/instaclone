@@ -10,7 +10,7 @@ import {
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import AdminPage from './components/admin-page/AdminPage';
-import AllPosts from './components/posts/AllPosts';
+import AllPosts from './components/Posts/AllPosts';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class App extends Component {
