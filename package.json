@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/react-redux": "^7.0.8",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",

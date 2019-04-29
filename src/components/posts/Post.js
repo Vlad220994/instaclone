@@ -58,9 +58,9 @@ export default class Post extends Component {
           <strong>{nickname}</strong>
           <span>{caption}</span>
         </div>
-          <div className="post-tags">
-              <strong>{tags}</strong>
-          </div>
+        <div className="post-tags">
+          <strong>{tags}</strong>
+        </div>
       </article>
     );
   }
