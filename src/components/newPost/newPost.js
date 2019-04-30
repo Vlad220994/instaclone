@@ -11,13 +11,14 @@ export default class NewPost extends Component {
   handleClick = () => {
     const postsData = JSON.parse(localStorage.getItem('postsData'));
     const { picture, text, tags } = this.state;
+    const count = (postsData && postsData.length) || 0;
 
-    const newPost = {
-      id: postsData.length + 1,
+    const newPost = [{
+      id: count + 1,
       text,
       picture,
       tags,
-    };
+    }];
 
     this.setState({
       picture: '',
@@ -25,7 +26,7 @@ export default class NewPost extends Component {
       tags: '',
     });
 
-    const newPostsData = [newPost, ...postsData];
+    const newPostsData = [...newPost, ...postsData];
 
     localStorage.setItem('postsData', JSON.stringify(newPostsData));
 
@@ -49,9 +50,8 @@ export default class NewPost extends Component {
 
       return (
         <div className="add-post">
-          <form className="">
-            <div>
-              <input
+          <div>
+            <input
                 name="picture"
                 placeholder="Picture link"
                 value={picture}
@@ -75,11 +75,10 @@ export default class NewPost extends Component {
               />
             </div>
             <div className="add-post-button">
-              <button className="btn" type="submit" onClick={this.handleClick}>
+              <button className="btn" onClick={this.handleClick}>
                 <i className="fa fa-plus-circle" />
               </button>
             </div>
-          </form>
         </div>
       );
     }
