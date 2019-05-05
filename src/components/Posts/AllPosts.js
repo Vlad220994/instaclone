@@ -7,16 +7,7 @@ import NewPost from '../NewPost/NewPost';
 
 import '../../data/posts-data';
 
-const defaultData = [{
-  id: '3',
-  text: 'Blah, blah, blah',
-  picture: 'https://pp.userapi.com/c846323/v846323906/1fe27c/EYUgUuudfZI.jpg',
-  tags: '#qwerty',
-}];
-
-const data = JSON.parse(localStorage.getItem('postsData')) || defaultData;
-
-localStorage.setItem('postsData', JSON.stringify(data));
+const data = JSON.parse(localStorage.getItem('postsData'));
 
 export default class AllPosts extends Component {
   state = {
@@ -28,7 +19,8 @@ export default class AllPosts extends Component {
   };
 
   render() {
-    const postItems = this.state.posts.map((item) => {
+    const {posts} = this.state;
+    const postItems = (posts && posts.length) ? posts.map((item) => {
       const {
         id,
         text,
@@ -46,7 +38,7 @@ export default class AllPosts extends Component {
           tags={tags}
         />
       );
-    });
+    }) : null;
 
     return (
       <Fragment>

@@ -26,7 +26,7 @@ export default class NewPost extends Component {
       tags: '',
     });
 
-    const newPostsData = [...newPost, ...postsData];
+    const newPostsData = (postsData && postsData.length) ? [...newPost, ...postsData] : [...newPost];
 
     localStorage.setItem('postsData', JSON.stringify(newPostsData));
 
