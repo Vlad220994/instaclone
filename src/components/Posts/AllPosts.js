@@ -4,20 +4,20 @@ import Header from '../Header/Header';
 import Post from './Post';
 import Footer from './Footer';
 import NewPost from '../NewPost/NewPost';
+import { connect } from 'react-redux';
+import {loadPosts} from "../../redux/actions/posts";
 
-const data = JSON.parse(localStorage.getItem('postsData'));
+class AllPosts extends Component {
+  componentDidMount() {
+    this.props.loadPosts();
+  }
 
-export default class AllPosts extends Component {
-  state = {
-    posts: data,
-  };
-
-  handleUpdate = (newPostsData) => {
-    this.setState({ posts: newPostsData });
+  handleUpdate = () => {
+      this.props.loadPosts();
   };
 
   render() {
-    const {posts} = this.state;
+    const {posts} = this.props;
     const postItems = (posts && posts.length) ? posts.map((item) => {
       const {
         id,
@@ -48,3 +48,16 @@ export default class AllPosts extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+    const { posts } = state.postsReducer;
+    return { posts }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        loadPosts: () => dispatch(loadPosts())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AllPosts);

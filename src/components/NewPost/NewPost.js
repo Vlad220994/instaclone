@@ -30,7 +30,7 @@ export default class NewPost extends Component {
 
     localStorage.setItem('postsData', JSON.stringify(newPostsData));
 
-    this.props.onUpdate(newPostsData);
+    this.props.onUpdate();
   };
 
     isDisabled = () => {
