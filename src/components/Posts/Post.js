@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './post.scss';
+import "./post.scss";
 
 export default class Post extends Component {
   state = {
-    done: false,
+    done: false
   };
 
   onLikeClick = () => {
     this.setState(({ done }) => ({
-      done: !done,
+      done: !done
     }));
   };
 
@@ -17,10 +17,10 @@ export default class Post extends Component {
     const { nickname, avatar, image, caption, tags } = this.props;
     const { done } = this.state;
 
-    let classNames = 'likes';
+    let classNames = "likes";
 
     if (done) {
-      classNames += ' likes-done';
+      classNames += " likes-done";
     }
 
     return (

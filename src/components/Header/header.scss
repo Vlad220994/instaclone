@@ -4,7 +4,7 @@
   text-align: center;
   z-index: 1;
   margin: 0 auto;
-  background-color: white; 
+  background-color: white;
   align-items: center;
   justify-content: space-around;
 
@@ -23,7 +23,7 @@
     border: 2px solid rgb(71, 62, 62);
     border-radius: 5px;
     outline: none;
-    color: #9E9C9C;
+    color: #9e9c9c;
   }
 
   button {
@@ -46,24 +46,24 @@
     display: inline-block;
     position: relative;
     margin: auto;
-  
+
     input[type="checkbox"] {
       display: none;
       &:checked {
         & ~ ul {
           display: block;
-          animation: $animation .1s;
+          animation: $animation 0.1s;
         }
       }
     }
-    
+
     img {
       display: inline-block;
       height: 2.5rem;
       vertical-align: middle;
       border-radius: 50%;
     }
-    
+
     ul {
       display: none;
       list-style: none;
@@ -80,15 +80,15 @@
       li {
         span {
           display: inline-block;
-          padding: .75rem 1rem;
+          padding: 0.75rem 1rem;
         }
         a {
           display: block;
-          padding: .75rem 1rem;
+          padding: 0.75rem 1rem;
           text-decoration: none;
-          color: darken($primary ,50%);
+          color: darken($primary, 50%);
           font-size: 1rem;
-          
+
           &:hover {
             background: rgb(59, 240, 180);
           }

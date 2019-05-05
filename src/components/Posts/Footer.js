@@ -1,9 +1,5 @@
-import React from 'react';
+import React from "react";
 
-const Footer = () => (
-  <footer>
-    © 2019 INSTACLONE
-  </footer>
-);
+const Footer = () => <footer>© 2019 INSTACLONE</footer>;
 
 export default Footer;

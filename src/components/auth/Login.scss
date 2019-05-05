@@ -1,4 +1,5 @@
-.login-form, .register-form {
+.login-form,
+.register-form {
   display: block;
   margin: 100px auto;
   width: 300px;
@@ -10,14 +11,14 @@
   .fa-camera {
     font-size: 60px;
   }
-  
+
   input {
     width: 220px;
     margin-bottom: 1rem;
   }
 
   .to-registration {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 
   .error {

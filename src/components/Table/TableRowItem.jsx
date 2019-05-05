@@ -1,29 +1,15 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 
 export default class TableRowItem extends Component {
-  state = {
-
-  };
+  state = {};
 
   render() {
-    const {
-      firstName,
-      lastName,
-      eMail,
-      removeRequest,
-      onDeleted, 
-    } = this.props;
+    const { firstName, lastName, eMail, removeRequest, onDeleted } = this.props;
     return (
       <Fragment>
-        <td>
-          {firstName}
-        </td>
-        <td>
-          {lastName}
-        </td>
-        <td>
-          {eMail}
-        </td>
+        <td>{firstName}</td>
+        <td>{lastName}</td>
+        <td>{eMail}</td>
         <td>
           <button
             type="button"

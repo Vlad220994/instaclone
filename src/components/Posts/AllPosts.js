@@ -1,12 +1,12 @@
-import React, { Fragment, Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Fragment, Component } from "react";
+import { connect } from "react-redux";
 
-import Header from '../Header/Header';
-import Post from './Post';
-import Footer from './Footer';
-import NewPost from '../NewPost/NewPost';
-import Spinner from "../spinner/spinner"
-import {loadPosts} from "../../redux/actions/posts";
+import Header from "../Header/Header";
+import Post from "./Post";
+import Footer from "./Footer";
+import NewPost from "../NewPost/NewPost";
+import Spinner from "../spinner/spinner";
+import { loadPosts } from "../../redux/actions/posts";
 
 class AllPosts extends Component {
   componentDidMount() {
@@ -14,36 +14,34 @@ class AllPosts extends Component {
   }
 
   handleUpdate = () => {
-      this.props.loadPosts();
+    this.props.loadPosts();
   };
 
   render() {
-    const {posts, loading} = this.props;
-    const postItems = (posts && posts.length) ? posts.map((item) => {
-      const {
-        id,
-        text,
-        picture,
-        tags,
-      } = item;
+    const { posts, loading } = this.props;
+    const postItems =
+      posts && posts.length
+        ? posts.map(item => {
+            const { id, text, picture, tags } = item;
 
-      return (
-        <Post
-          key={id}
-          nickname={id}
-          avatar={''}
-          caption={text}
-          image={picture}
-          tags={tags}
-        />
-      );
-    }) : null;
+            return (
+              <Post
+                key={id}
+                nickname={id}
+                avatar={""}
+                caption={text}
+                image={picture}
+                tags={tags}
+              />
+            );
+          })
+        : null;
 
     return (
       <Fragment>
         <Header />
         <NewPost onUpdate={this.handleUpdate} />
-        {loading ? <Spinner/> : postItems}
+        {loading ? <Spinner /> : postItems}
         <Footer />
       </Fragment>
     );
@@ -51,14 +49,17 @@ class AllPosts extends Component {
 }
 
 function mapStateToProps(state) {
-    const { posts, loading, error } = state.postsReducer;
-    return { posts, loading, error }
+  const { posts, loading, error } = state.postsReducer;
+  return { posts, loading, error };
 }
 
 function mapDispatchToProps(dispatch) {
-    return {
-        loadPosts: () => dispatch(loadPosts())
-    }
+  return {
+    loadPosts: () => dispatch(loadPosts())
+  };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllPosts);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AllPosts);

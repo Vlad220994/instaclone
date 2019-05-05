@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import Search from '../Posts/Search';
-import './header.scss';
+import Search from "../Posts/Search";
+import "./header.scss";
 
 const Header = () => (
   <header className="header-main">
@@ -19,10 +19,18 @@ const Header = () => (
             alt="logo"
           />
           <ul>
-            <li><span>profile-name</span></li>
-            <li><a href="#">Add Post</a></li>
-            <li><a href="#">Delete Account</a></li>
-            <li><Link to="/login">Logout</Link></li>
+            <li>
+              <span>profile-name</span>
+            </li>
+            <li>
+              <a href="#">Add Post</a>
+            </li>
+            <li>
+              <a href="#">Delete Account</a>
+            </li>
+            <li>
+              <Link to="/login">Logout</Link>
+            </li>
           </ul>
         </label>
       </div>

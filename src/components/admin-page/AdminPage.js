@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Header from '../Header/Header';
-import Table from '../Table/Table';
-import './admin-page.scss';
+import Header from "../Header/Header";
+import Table from "../Table/Table";
+import "./admin-page.scss";
 
 const AdminPage = () => {
-  const usersData = JSON.parse(localStorage.getItem('usersData'));
+  const usersData = JSON.parse(localStorage.getItem("usersData"));
 
   return (
     <div className="admin-page">
