@@ -1,10 +1,11 @@
 import React, { Fragment, Component } from 'react';
+import { connect } from 'react-redux';
 
 import Header from '../Header/Header';
 import Post from './Post';
 import Footer from './Footer';
 import NewPost from '../NewPost/NewPost';
-import { connect } from 'react-redux';
+import Spinner from "../spinner/spinner"
 import {loadPosts} from "../../redux/actions/posts";
 
 class AllPosts extends Component {
@@ -17,7 +18,7 @@ class AllPosts extends Component {
   };
 
   render() {
-    const {posts} = this.props;
+    const {posts, loading} = this.props;
     const postItems = (posts && posts.length) ? posts.map((item) => {
       const {
         id,
@@ -42,7 +43,7 @@ class AllPosts extends Component {
       <Fragment>
         <Header />
         <NewPost onUpdate={this.handleUpdate} />
-        {postItems}
+        {loading ? <Spinner/> : postItems}
         <Footer />
       </Fragment>
     );
@@ -50,8 +51,8 @@ class AllPosts extends Component {
 }
 
 function mapStateToProps(state) {
-    const { posts } = state.postsReducer;
-    return { posts }
+    const { posts, loading, error } = state.postsReducer;
+    return { posts, loading, error }
 }
 
 function mapDispatchToProps(dispatch) {

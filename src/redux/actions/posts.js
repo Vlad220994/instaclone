@@ -6,9 +6,12 @@ export function loadPosts() {
         dispatch(loadPostsStart());
 
         try {
-            const postsService = new PostsService();
-            const posts = await postsService.getResource();
-            dispatch(loadPostsSuccess(posts));
+            // имитация работы сервера
+            setTimeout(() => {
+                const postsService = new PostsService();
+                const posts = postsService.getResource();
+                dispatch(loadPostsSuccess(posts));
+            }, 500)
         } catch (e) {
             dispatch(loadPostsError(e));
         }
