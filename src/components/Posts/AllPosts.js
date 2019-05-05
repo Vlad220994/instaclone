@@ -5,8 +5,6 @@ import Post from './Post';
 import Footer from './Footer';
 import NewPost from '../NewPost/NewPost';
 
-import '../../data/posts-data';
-
 const data = JSON.parse(localStorage.getItem('postsData'));
 
 export default class AllPosts extends Component {

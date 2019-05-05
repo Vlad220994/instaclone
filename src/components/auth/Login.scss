@@ -13,9 +13,15 @@
   
   input {
     width: 220px;
+    margin-bottom: 1rem;
   }
 
   .to-registration {
     margin-top: 10px; 
+  }
+
+  .error {
+    color: red;
+    margin-bottom: 10px;
   }
 }

@@ -33,6 +33,11 @@ export default class NewPost extends Component {
     this.props.onUpdate(newPostsData);
   };
 
+    isDisabled = () => {
+        const {text, picture, tags} = this.state;
+        return !(text && picture && tags);
+    };
+
     pictureChange = (event) => {
       this.setState({ picture: event.target.value });
     };
@@ -75,7 +80,9 @@ export default class NewPost extends Component {
               />
             </div>
             <div className="add-post-button">
-              <button className="btn" onClick={this.handleClick}>
+              <button className="btn"
+                      onClick={this.handleClick}
+                      disabled={this.isDisabled()}>
                 <i className="fa fa-plus-circle" />
               </button>
             </div>
