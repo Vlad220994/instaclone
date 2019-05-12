@@ -13,9 +13,7 @@ class AllPosts extends Component {
     this.props.loadPosts();
   }
 
-  handleUpdate = () => {
-    this.props.loadPosts();
-  };
+  
 
   render() {
     const { posts, loading } = this.props;
@@ -40,7 +38,7 @@ class AllPosts extends Component {
     return (
       <Fragment>
         <Header />
-        <NewPost onUpdate={this.handleUpdate} />
+        <NewPost />
         {loading ? <Spinner /> : postItems}
         <Footer />
       </Fragment>

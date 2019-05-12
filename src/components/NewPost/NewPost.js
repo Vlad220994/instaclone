@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import "./newPost.scss";
+import { connect } from "react-redux";
 
-export default class NewPost extends Component {
+import { addPost } from "../../redux/actions/posts";
+
+class NewPost extends Component {
   state = {
     picture: "",
     text: "",
@@ -9,13 +12,11 @@ export default class NewPost extends Component {
   };
 
   handleClick = () => {
-    const postsData = JSON.parse(localStorage.getItem("postsData"));
     const { picture, text, tags } = this.state;
-    const count = (postsData && postsData.length) || 0;
 
     const newPost = [
       {
-        id: count + 1,
+        id: 1,
         text,
         picture,
         tags
@@ -28,12 +29,7 @@ export default class NewPost extends Component {
       tags: ""
     });
 
-    const newPostsData =
-      postsData && postsData.length ? [...newPost, ...postsData] : [...newPost];
-
-    localStorage.setItem("postsData", JSON.stringify(newPostsData));
-
-    this.props.onUpdate();
+    this.props.addPost(newPost);
   };
 
   isDisabled = () => {
@@ -95,3 +91,11 @@ export default class NewPost extends Component {
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addPost: (newPost) => dispatch(addPost(newPost))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(NewPost)
