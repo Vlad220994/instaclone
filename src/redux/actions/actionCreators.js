@@ -1,7 +1,10 @@
 import {
   POSTS_LOAD_START,
   POSTS_LOAD_SUCCESS,
-  POSTS_LOAD_ERROR
+  POSTS_LOAD_ERROR,
+  USERS_LOAD_START,
+  USERS_LOAD_SUCCESS,
+  USERS_LOAD_ERROR,
 } from "../constants/actionTypes";
 
 export function loadPostsStart() {
@@ -20,6 +23,26 @@ export function loadPostsSuccess(posts) {
 export function loadPostsError(error) {
   return {
     type: POSTS_LOAD_ERROR,
+    error
+  };
+}
+
+export function loadUsersStart() {
+  return {
+    type: USERS_LOAD_START
+  };
+}
+
+export function loadUsersSuccess(users) {
+  return {
+    type: USERS_LOAD_SUCCESS,
+    users
+  };
+}
+
+export function loadUsersError(error) {
+  return {
+    type: USERS_LOAD_ERROR,
     error
   };
 }

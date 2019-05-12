@@ -1,20 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Header from "../Header/Header";
-import Table from "../Table/Table";
+import THead from "../Table/THead";
+import TBody from "../Table/TBody";
+
 import "./admin-page.scss";
 
-const AdminPage = () => {
-  const usersData = JSON.parse(localStorage.getItem("usersData"));
-
-  return (
-    <div className="admin-page">
-      <Header />
-      <h2>Admin Page</h2>
-      <h3>{`Number of accounts ${usersData.length}`}</h3>
-      <Table data={usersData} />
-    </div>
-  );
-};
-
-export default AdminPage;
+export default class AdminPage extends Component {
+  render() {
+    return(
+      <div className="admin-page">
+        <Header />
+        <h2>Admin Page</h2>
+        <table className="table">
+          <THead />
+          <TBody />
+        </table>
+      </div>
+    );
+  }
+}
