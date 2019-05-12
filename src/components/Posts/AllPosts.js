@@ -13,8 +13,6 @@ class AllPosts extends Component {
     this.props.loadPosts();
   }
 
-  
-
   render() {
     const { posts, loading } = this.props;
     const postItems =

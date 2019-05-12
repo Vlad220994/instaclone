@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import {addUser} from "../../redux/actions/users";
 
-export default class Register extends Component {
+class Register extends Component {
   state = {
     first: "",
     last: "",
@@ -23,12 +25,10 @@ export default class Register extends Component {
   };
 
   handleSubmit = () => {
-    const usersData = JSON.parse(localStorage.getItem("usersData"));
     const { first, last, email, password } = this.state;
-    const id = usersData && usersData.length ? usersData.length + 1 : 1;
     const newUser = [
       {
-        id: id,
+        id: 1,
         firstName: first,
         lastName: last,
         eMail: email,
@@ -37,10 +37,16 @@ export default class Register extends Component {
       }
     ];
 
-    const users =
-      usersData && usersData.length ? [...usersData, ...newUser] : [...newUser];
-    localStorage.setItem("usersData", JSON.stringify(users));
-    document.location.href = "http://localhost:3000/posts";
+    this.props.addUser(newUser);
+    this.setState(
+      {
+        first: "",
+        last: "",
+        email: "",
+        password: "",
+        password2: ""
+      }
+    );
   };
 
   render() {
@@ -105,3 +111,11 @@ export default class Register extends Component {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addUser: (newUser) => dispatch(addUser(newUser))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Register);
