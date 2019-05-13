@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Search from "../Posts/Search";
-import "./Header.scss";
+import Search from '../Posts/Search';
+import './Header.scss';
 
 const Header = () => (
   <header className="header-main">

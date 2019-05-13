@@ -1,14 +1,15 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Header from "../Header/Header";
-import THead from "../Table/THead";
-import TBody from "../Table/TBody";
+import Header from '../Header/Header';
+import THead from '../Table/THead';
+import TBody from '../Table/TBody';
 
-import "./admin-page.scss";
+import './AdminPage.scss';
 
+// eslint-disable-next-line react/prefer-stateless-function
 export default class AdminPage extends Component {
   render() {
-    return(
+    return (
       <div className="admin-page">
         <Header />
         <h2>Admin Page</h2>

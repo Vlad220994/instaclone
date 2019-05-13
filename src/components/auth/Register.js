@@ -1,6 +1,6 @@
-import React, { Component } from "./node_modules/react";
-import { Link } from "./node_modules/react-router-dom";
-import { connect } from "./node_modules/react-redux";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import { addUser } from "../../redux/actions/users";
 
 class Register extends Component {

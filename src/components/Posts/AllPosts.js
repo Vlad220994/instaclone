@@ -1,12 +1,13 @@
-import React, { Fragment, Component } from "react";
-import { connect } from "react-redux";
+import React, { Fragment, Component } from 'react';
+import { connect } from 'react-redux';
 
-import Header from "../Header/Header";
-import Post from "./Post";
-import Footer from "./Footer";
-import NewPost from "../NewPost/NewPost";
-import Spinner from "../Spinner/Spinner";
-import { loadPosts, removePost } from "../../redux/actions/posts";
+import Header from '../Header/Header';
+import Post from './Post';
+import AllUsers from './AllUsers';
+import Footer from './Footer';
+import NewPost from '../NewPost/NewPost';
+import Spinner from '../Spinner/Spinner';
+import { loadPosts, removePost } from '../../redux/actions/posts';
 
 class AllPosts extends Component {
   componentDidMount() {
@@ -15,29 +16,31 @@ class AllPosts extends Component {
 
   render() {
     const { posts, loading, onDeleted } = this.props;
-    const postItems =
-      posts && posts.length
-        ? posts.map(item => {
-            const { id, text, picture, tags } = item;
+    const postItems = posts && posts.length
+      ? posts.map((item) => {
+        const {
+          id, text, picture, tags,
+        } = item;
 
-            return (
-              <Post
-                key={id}
-                nickname={id}
-                avatar={""}
-                caption={text}
-                image={picture}
-                tags={tags}
-                onDeleted={() => onDeleted(id)}
-              />
-            );
-          })
-        : null;
+        return (
+          <Post
+            key={id}
+            nickname={id}
+            avatar=""
+            caption={text}
+            image={picture}
+            tags={tags}
+            onDeleted={() => onDeleted(id)}
+          />
+        );
+      })
+      : null;
 
     return (
       <Fragment>
         <Header />
         <NewPost />
+        <AllUsers />
         {loading ? <Spinner /> : postItems}
         <Footer />
       </Fragment>
@@ -53,10 +56,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     loadPosts: () => dispatch(loadPosts()),
-    onDeleted: (id)=> dispatch(removePost(id))
+    onDeleted: id => dispatch(removePost(id)),
   };
 }
 
-export default connect(mapStateToProps,
-  mapDispatchToProps
-)(AllPosts);
+export default connect(mapStateToProps, mapDispatchToProps)(AllPosts);

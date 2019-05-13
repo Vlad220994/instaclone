@@ -2,10 +2,11 @@ import React, { Component, Fragment } from "react";
 
 import AllPosts from "../Posts/AllPosts";
 import { Link } from "react-router-dom";
-
+import isLogin from "../../redux/actions/login"
 import "./Login.scss";
+import { connect } from "react-redux";
 
-export default class Login extends Component {
+class Login extends Component {
   state = {
     email: "",
     password: "",
@@ -38,6 +39,8 @@ export default class Login extends Component {
         error: true
       });
     }
+
+    this.props.isLogin(true);
   };
 
   isDisabled = () => {
@@ -89,3 +92,9 @@ export default class Login extends Component {
     );
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  isLogin: value => dispatch(isLogin(value)),
+});
+
+export default connect(null, mapDispatchToProps)(Login)
