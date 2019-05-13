@@ -9,7 +9,7 @@ class Register extends Component {
     last: "",
     email: "",
     password: "",
-    password2: ""
+    password2: "",
   };
 
   handleChange = ({ target }) => {
