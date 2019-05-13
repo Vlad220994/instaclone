@@ -1,7 +1,8 @@
 import {
   loadUsersStart,
   loadUsersSuccess,
-  loadUsersError
+  loadUsersError,
+  setUser
 } from "../actions/actionCreators";
 import UsersService from "../../services/getUsers";
 
@@ -54,4 +55,9 @@ export function removeUser(id) {
         dispatch(loadUsersError(e));
     }
   }
+}
+
+export function setActiveUser(user) {
+    localStorage.setItem("activeUser", JSON.stringify(user));
+    return dispatch => dispatch(setUser(user))
 }

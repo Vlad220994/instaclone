@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Search from '../Posts/Search';
-import './Header.scss';
+import './header.scss';
+
+const activeUser = JSON.parse(localStorage.getItem("activeUser"));
 
 const Header = () => (
   <header className="header-main">
@@ -20,7 +22,7 @@ const Header = () => (
           />
           <ul>
             <li>
-              <span>profile-name</span>
+              <span>{activeUser.eMail}</span>
             </li>
             <li>
               <Link to="/login">Logout</Link>

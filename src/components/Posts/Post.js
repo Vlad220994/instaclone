@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./Post.scss";
+import "./post.scss";
 
 export default class Post extends Component {
   state = {

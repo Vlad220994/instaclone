@@ -7,3 +7,4 @@ export const USERS_LOAD_SUCCESS = 'USERS_LOAD_SUCCESS';
 export const USERS_LOAD_ERROR = 'USERS_LOAD_ERROR';
 
 export const IS_LOGGED = 'IS_LOGGED';
+export const SET_ACTIVE_USER = "SET_ACTIVE_USER";

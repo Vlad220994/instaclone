@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addPost } from "../../redux/actions/posts";
-import "./NewPost.scss";
+import "./newPost.scss";
 
 class NewPost extends Component {
   state = {

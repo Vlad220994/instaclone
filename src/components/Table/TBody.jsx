@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 import TableRowItem from "./TableRowItem";
-import Spinner from "../Spinner/Spinner";
+import Spinner from "../spinner/Spinner";
 import { removeUser, loadUsers } from "../../redux/actions/users";
 import { connect } from "react-redux";
 

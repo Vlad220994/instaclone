@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import isLogin from "../../redux/actions/login"
 import "./Login.scss";
 import { connect } from "react-redux";
+import {loadUsers, setActiveUser} from "../../redux/actions/users";
 
 class Login extends Component {
   state = {
@@ -14,6 +15,10 @@ class Login extends Component {
     isLogin: false
   };
 
+  componentDidMount() {
+    this.props.loadUsers();
+  }
+
   handleChange = ({ target }) => {
     const name = target.name;
     this.setState({
@@ -22,17 +27,16 @@ class Login extends Component {
   };
 
   handleSubmit = () => {
-    const usersData = JSON.parse(localStorage.getItem("usersData"));
     const { email, password } = this.state;
-    const isExistPassword =
-      usersData &&
-      usersData.some(
+    const { users, setActiveUser } = this.props;
+    const activeUser = users.filter(
         item => item.eMail === email && item.password === password
       );
 
-    if (isExistPassword) {
+    if (activeUser.length) {
+      setActiveUser(activeUser[0]);
       this.setState({
-        isLogin: true
+          isLogin: true
       })
     } else {
       this.setState({
@@ -50,7 +54,7 @@ class Login extends Component {
 
   render() {
     const { email, password, error, isLogin } = this.state;
-    
+
     return (
       <Fragment>
         {isLogin ? <AllPosts /> : (
@@ -93,8 +97,15 @@ class Login extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+    const {users} = state.usersReducer;
+    return {users}
+};
+
 const mapDispatchToProps = dispatch => ({
   isLogin: value => dispatch(isLogin(value)),
+  loadUsers: () => dispatch(loadUsers()),
+  setActiveUser: activeUser => dispatch(setActiveUser(activeUser)),
 });
 
-export default connect(null, mapDispatchToProps)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

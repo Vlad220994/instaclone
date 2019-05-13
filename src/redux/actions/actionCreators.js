@@ -5,6 +5,7 @@ import {
   USERS_LOAD_START,
   USERS_LOAD_SUCCESS,
   USERS_LOAD_ERROR,
+  SET_ACTIVE_USER
 } from "../constants/actionTypes";
 
 export function loadPostsStart() {
@@ -45,4 +46,11 @@ export function loadUsersError(error) {
     type: USERS_LOAD_ERROR,
     error
   };
+}
+
+export function setUser(user) {
+    return {
+        type: SET_ACTIVE_USER,
+        user
+    };
 }

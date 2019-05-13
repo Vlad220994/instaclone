@@ -6,7 +6,7 @@ import Post from './Post';
 import AllUsers from './AllUsers';
 import Footer from './Footer';
 import NewPost from '../NewPost/NewPost';
-import Spinner from '../Spinner/Spinner';
+import Spinner from '../spinner/Spinner';
 import { loadPosts, removePost } from '../../redux/actions/posts';
 
 class AllPosts extends Component {
