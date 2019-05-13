@@ -5,8 +5,8 @@ import Header from "../Header/Header";
 import Post from "./Post";
 import Footer from "./Footer";
 import NewPost from "../NewPost/NewPost";
-import Spinner from "../spinner/spinner";
-import { loadPosts } from "../../redux/actions/posts";
+import Spinner from "../Spinner/Spinner";
+import { loadPosts, removePost } from "../../redux/actions/posts";
 
 class AllPosts extends Component {
   componentDidMount() {
@@ -14,7 +14,7 @@ class AllPosts extends Component {
   }
 
   render() {
-    const { posts, loading } = this.props;
+    const { posts, loading, onDeleted } = this.props;
     const postItems =
       posts && posts.length
         ? posts.map(item => {
@@ -28,6 +28,7 @@ class AllPosts extends Component {
                 caption={text}
                 image={picture}
                 tags={tags}
+                onDeleted={() => onDeleted(id)}
               />
             );
           })
@@ -51,11 +52,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    loadPosts: () => dispatch(loadPosts())
+    loadPosts: () => dispatch(loadPosts()),
+    onDeleted: (id)=> dispatch(removePost(id))
   };
 }
 
-export default connect(
-  mapStateToProps,
+export default connect(mapStateToProps,
   mapDispatchToProps
 )(AllPosts);

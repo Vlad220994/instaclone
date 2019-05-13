@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
+import AllPosts from "../Posts/AllPosts";
 import { Link } from "react-router-dom";
 
 import "./Login.scss";
@@ -8,7 +9,8 @@ export default class Login extends Component {
   state = {
     email: "",
     password: "",
-    error: false
+    error: false,
+    isLogin: false
   };
 
   handleChange = ({ target }) => {
@@ -28,7 +30,9 @@ export default class Login extends Component {
       );
 
     if (isExistPassword) {
-      document.location.href = "http://localhost:3000/posts";
+      this.setState({
+        isLogin: true
+      })
     } else {
       this.setState({
         error: true
@@ -42,42 +46,46 @@ export default class Login extends Component {
   };
 
   render() {
-    const { email, password, error } = this.state;
-
+    const { email, password, error, isLogin } = this.state;
+    
     return (
-      <div className="login-form">
-        <div className="logo">
-          <i className="fa fa-camera" />
+      <Fragment>
+        {isLogin ? <AllPosts /> : (
+        <div className="login-form">
+          <div className="logo">
+            <i className="fa fa-camera" />
+          </div>
+          <h1>InstaClone</h1>
+          <div>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              name="email"
+              onChange={this.handleChange}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              name="password"
+              onChange={this.handleChange}
+            />
+          </div>
+          {error ? <div className="error">Incorrect login or password</div> : null}
+          <button
+            className="btn btn-primary btn-left"
+            onClick={this.handleSubmit}
+            disabled={this.isDisabled()}
+          >
+            Login
+          </button>
+          <div className="to-registration">
+            First time on InstaClone? <Link to="/register">Registration</Link>
+          </div>
         </div>
-        <h1>InstaClone</h1>
-        <div>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            name="email"
-            onChange={this.handleChange}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            name="password"
-            onChange={this.handleChange}
-          />
-        </div>
-        {error ? <div className="error">Неверный логин или пароль</div> : null}
-        <button
-          className="btn btn-primary btn-left"
-          onClick={this.handleSubmit}
-          disabled={this.isDisabled()}
-        >
-          Login
-        </button>
-        <div className="to-registration">
-          First time on InstaClone? <Link to="/register">Registration</Link>
-        </div>
-      </div>
+        )}
+      </Fragment>
     );
   }
 }

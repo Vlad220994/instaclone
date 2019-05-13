@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
+
 import TableRowItem from "./TableRowItem";
-import Spinner from "../spinner/spinner";
+import Spinner from "../Spinner/Spinner";
 import { removeUser, loadUsers } from "../../redux/actions/users";
 import { connect } from "react-redux";
 
@@ -14,27 +15,25 @@ class TBody extends Component {
     return(
       <Fragment>
         {loading ? <Spinner /> : 
-      (<Fragment>
-        <tbody>
-        {users.map(item => {
-          const { id, firstName, lastName, eMail, removeRequest } = item;
+          (<Fragment>
+            <tbody>
+              {users.map(item => {
+                const { id, firstName, lastName, eMail, removeRequest } = item;
 
-          return (
-            <tr key={id} className="table-row">
-              <TableRowItem
-                firstName={firstName}
-                lastName={lastName}
-                eMail={eMail}
-                removeRequest={removeRequest}
-                onDeleted={() => onDeleted(id)}
-              />
-            </tr>
-          );
-        })}
-      </tbody>
-      
-      <h3>{`Number of accounts ${users.length}`}</h3></Fragment>)}
-      
+              return (
+                <tr key={id} className="table-row">
+                  <TableRowItem
+                    firstName={firstName}
+                    lastName={lastName}
+                    eMail={eMail}
+                    removeRequest={removeRequest}
+                    onDeleted={() => onDeleted(id)}
+                  />
+                </tr>
+                );
+              })}
+            </tbody>
+          </Fragment>)}
       </Fragment>
     );
   }
@@ -42,6 +41,7 @@ class TBody extends Component {
   
 const mapStateToProps = (state) => {
   const {users, loading, error} = state.usersReducer;
+
   return {
     users, loading, error
   }
@@ -53,6 +53,5 @@ const mapDispatchToProps = (dispatch) => {
     loadUsers: () => dispatch(loadUsers())
   }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(TBody);

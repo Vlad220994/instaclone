@@ -1,15 +1,14 @@
 import React from "react";
-import "./spinner.scss";
+import "./Spinner.scss";
 
 const Spinner = () => {
   const divStyle = {
-    display: "flex",
-    justifyContent: "center",
-    marginTop: "10%"
+    position: "absolute",
+    left: "44%"
   };
 
   return (
-    <div style={divStyle} className="lds-css ng-scope">
+    <div style={divStyle} className="spinner lds-css ng-scope spinner">
       <div className="lds-rolling">
         <div />
       </div>

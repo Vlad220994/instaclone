@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import {addUser} from "../../redux/actions/users";
+import React, { Component } from "./node_modules/react";
+import { Link } from "./node_modules/react-router-dom";
+import { connect } from "./node_modules/react-redux";
+import { addUser } from "../../redux/actions/users";
 
 class Register extends Component {
   state = {
@@ -28,7 +28,7 @@ class Register extends Component {
     const { first, last, email, password } = this.state;
     const newUser = [
       {
-        id: 1,
+        id: Math.floor(Math.random(0,1)*10000),
         firstName: first,
         lastName: last,
         eMail: email,

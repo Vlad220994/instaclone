@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import "./newPost.scss";
 import { connect } from "react-redux";
-
 import { addPost } from "../../redux/actions/posts";
+import "./NewPost.scss";
 
 class NewPost extends Component {
   state = {
@@ -16,7 +15,7 @@ class NewPost extends Component {
 
     const newPost = [
       {
-        id: 1,
+        id: Math.floor(Math.random(0,1)*10000),
         text,
         picture,
         tags

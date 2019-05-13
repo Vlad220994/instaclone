@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import "./post.scss";
+import "./Post.scss";
 
 export default class Post extends Component {
   state = {
@@ -14,7 +15,7 @@ export default class Post extends Component {
   };
 
   render() {
-    const { nickname, avatar, image, caption, tags } = this.props;
+    const { nickname, image, caption, tags, onDeleted } = this.props;
     const { done } = this.state;
 
     let classNames = "likes";
@@ -27,17 +28,17 @@ export default class Post extends Component {
       <article className="post">
         <header className="post-user">
           <div className="post-user-avatar">
-            <img src={avatar} alt={nickname} />
+            <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png" alt={nickname} />
           </div>
           <div className="post-user-nickname">
-            <span>{nickname}</span>
+            <span>Anomymous</span>
           </div>
           <div className="post-delete">
             <button
               className={classNames}
               type="button"
               value="open"
-              onClick={this.openModal}
+              onClick={onDeleted}
             />
           </div>
         </header>
@@ -52,14 +53,13 @@ export default class Post extends Component {
           >
             <span className="like" aria-label="like" />
           </button>
-          <span>Likes</span>
         </div>
         <div className="post-caption">
-          <strong>{nickname}</strong>
+          <strong>Anomymous</strong>
           <span>{caption}</span>
         </div>
         <div className="post-tags">
-          <strong>{tags}</strong>
+          <Link to={tags}>{tags}</Link>
         </div>
       </article>
     );

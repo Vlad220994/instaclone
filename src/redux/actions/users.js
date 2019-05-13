@@ -38,6 +38,7 @@ export function addUser(newUser) {
     }
   }
 }
+
 export function removeUser(id) {
   return async dispatch => {
     dispatch(loadUsersStart());
