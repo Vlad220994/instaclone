@@ -1,9 +1,7 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import "./post.scss";
-
-const activeUser = JSON.parse(localStorage.getItem('activeUser'));
+import './post.scss';
 
 export default class Post extends Component {
   state = {
@@ -17,7 +15,7 @@ export default class Post extends Component {
   };
 
   render() {
-    const { nickname, image, caption, tags, onDeleted } = this.props;
+    const { nickname, image, caption, tags, onDeleted, userAvatar, userMail } = this.props;
     const { done } = this.state;
 
     let classNames = "likes";
@@ -30,10 +28,10 @@ export default class Post extends Component {
       <article className="post">
         <header className="post-user">
           <div className="post-user-avatar">
-            <img src={activeUser.avatar} alt={nickname} />
+            <img src={userAvatar} alt={nickname} />
           </div>
           <div className="post-user-nickname">
-            <span>{activeUser.eMail}</span>
+            <span>{userMail}</span>
           </div>
           <div className="post-delete">
             <button
@@ -57,7 +55,7 @@ export default class Post extends Component {
           </button>
         </div>
         <div className="post-caption">
-          <strong>{activeUser.eMail}</strong>
+          <strong>{userMail}</strong>
           <span>{caption}</span>
         </div>
         <div className="post-tags">

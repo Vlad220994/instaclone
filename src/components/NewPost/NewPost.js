@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { addPost } from "../../redux/actions/posts";
-import "./newPost.scss";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addPost } from '../../redux/actions/posts';
+import './newPost.scss';
 
 class NewPost extends Component {
   state = {
@@ -12,13 +12,16 @@ class NewPost extends Component {
 
   handleClick = () => {
     const { picture, text, tags } = this.state;
+    const activeUser = JSON.parse(localStorage.getItem('activeUser'));
 
     const newPost = [
       {
-        id: Math.floor(Math.random(0,1)*10000),
+        id: Math.floor(Math.random()*10000),
         text,
         picture,
-        tags
+        tags,
+        userAvatar: activeUser.avatar,
+        userMail: activeUser.eMail,
       }
     ];
 

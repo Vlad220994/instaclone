@@ -18,7 +18,7 @@ class AllPosts extends Component {
     const postItems = posts && posts.length
       ? posts.map((item) => {
         const {
-          id, text, picture, tags,
+          id, text, picture, tags, userAvatar, userMail
         } = item;
 
         return (
@@ -30,6 +30,8 @@ class AllPosts extends Component {
             image={picture}
             tags={tags}
             onDeleted={() => onDeleted(id)}
+            userAvatar={userAvatar}
+            userMail={userMail}
           />
         );
       })

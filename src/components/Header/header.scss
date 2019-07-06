@@ -69,14 +69,15 @@
     }
 
     .fa-user-times {
-      margin-left: 20px; 
       font-size: 25px;
-      padding: 0;
+    }
+
+    a, button {
+      margin-left: 20px;
     }
     
     .fa-sign-out {
       font-size: 25px;
-      margin-left: 50px; 
     }
   }
 }

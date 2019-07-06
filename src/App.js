@@ -16,7 +16,6 @@ import AllPosts from './components/Posts/AllPosts';
 class App extends Component {
   render() {
     const history = createBrowserHistory();
-    const { isLogin } = this.props;
     return (
       <Router history={history}>
         <Switch>

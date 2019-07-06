@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react';
 
-import AllPosts from "../Posts/AllPosts";
-import { Link, Redirect } from "react-router-dom";
-import isLogin from "../../redux/actions/login"
-import "./Login.scss";
-import { connect } from "react-redux";
-import { loadUsers, setActiveUser } from "../../redux/actions/users";
+import AllPosts from '../Posts/AllPosts';
+import { Link, Redirect } from 'react-router-dom';
+import isLogin from '../../redux/actions/login'
+import './Login.scss';
+import { connect } from 'react-redux';
+import { loadUsers, setActiveUser } from '../../redux/actions/users';
 
 class Login extends Component {
   state = {
