@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import Header from '../Header/Header';
 import Post from './Post';
-import AllUsers from './AllUsers';
 import Footer from './Footer';
 import NewPost from '../NewPost/NewPost';
 import Spinner from '../spinner/Spinner';
@@ -40,7 +39,6 @@ class AllPosts extends Component {
       <Fragment>
         <Header />
         <NewPost />
-        <AllUsers />
         {loading ? <Spinner /> : postItems}
         <Footer />
       </Fragment>

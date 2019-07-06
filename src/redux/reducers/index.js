@@ -5,5 +5,5 @@ import isLogged from './auth';
 import activeUserReducer from './activeUser';
 
 export default combineReducers({
-  postsReducer, usersReducer, isLogged, activeUserReducer
+  postsReducer, usersReducer, isLogged, activeUserReducer,
 });

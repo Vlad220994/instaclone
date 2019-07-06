@@ -1,14 +1,14 @@
 import {
   loadPostsStart,
   loadPostsSuccess,
-  loadPostsError
-} from "../actions/actionCreators";
-import PostsService from "../../services/getPosts";
+  loadPostsError,
+} from '../actions/actionCreators';
+import PostsService from '../../services/getPosts';
 
 const postsService = new PostsService();
 
 export function loadPosts() {
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch(loadPostsStart());
 
     try {
@@ -23,7 +23,7 @@ export function loadPosts() {
 }
 
 export function addPost(newPost) {
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch(loadPostsStart());
 
     try {
@@ -31,16 +31,16 @@ export function addPost(newPost) {
         const posts = postsService.getResource();
         const newPosts = [...newPost, ...posts];
         dispatch(loadPostsSuccess(newPosts));
-        localStorage.setItem("postsData", JSON.stringify(newPosts));
+        localStorage.setItem('postsData', JSON.stringify(newPosts));
       }, 500);
     } catch (e) {
-        dispatch(loadPostsError(e));
+      dispatch(loadPostsError(e));
     }
-  }
+  };
 }
 
 export function removePost(id) {
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch(loadPostsStart());
 
     try {
@@ -48,10 +48,10 @@ export function removePost(id) {
         const posts = postsService.getResource();
         const newPosts = posts.filter(item => item.id !== id);
         dispatch(loadPostsSuccess(newPosts));
-        localStorage.setItem("postsData", JSON.stringify(newPosts));
+        localStorage.setItem('postsData', JSON.stringify(newPosts));
       }, 500);
     } catch (e) {
-        dispatch(loadPostsError(e));
+      dispatch(loadPostsError(e));
     }
-  }
+  };
 }

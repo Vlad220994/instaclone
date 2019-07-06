@@ -1,10 +1,17 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react';
 
+// eslint-disable-next-line react/prefer-stateless-function
 export default class TableRowItem extends Component {
 
   render() {
-    const { firstName, lastName, eMail, removeRequest, onDeleted } = this.props;
-    
+    const {
+      firstName,
+      lastName,
+      eMail,
+      removeRequest,
+      onDeleted 
+    } = this.props;
+
     return (
       <Fragment>
         <td>{firstName}</td>

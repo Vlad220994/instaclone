@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./post.scss";
 
+const activeUser = JSON.parse(localStorage.getItem('activeUser'));
+
 export default class Post extends Component {
   state = {
     done: false
@@ -28,10 +30,10 @@ export default class Post extends Component {
       <article className="post">
         <header className="post-user">
           <div className="post-user-avatar">
-            <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png" alt={nickname} />
+            <img src={activeUser.avatar} alt={nickname} />
           </div>
           <div className="post-user-nickname">
-            <span>Anomymous</span>
+            <span>{activeUser.eMail}</span>
           </div>
           <div className="post-delete">
             <button
@@ -55,7 +57,7 @@ export default class Post extends Component {
           </button>
         </div>
         <div className="post-caption">
-          <strong>Anomymous</strong>
+          <strong>{activeUser.eMail}</strong>
           <span>{caption}</span>
         </div>
         <div className="post-tags">

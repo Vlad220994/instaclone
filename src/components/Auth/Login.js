@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
 
 import AllPosts from "../Posts/AllPosts";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import isLogin from "../../redux/actions/login"
 import "./Login.scss";
 import { connect } from "react-redux";
-import {loadUsers, setActiveUser} from "../../redux/actions/users";
+import { loadUsers, setActiveUser } from "../../redux/actions/users";
 
 class Login extends Component {
   state = {
@@ -42,9 +42,7 @@ class Login extends Component {
       this.setState({
         error: true
       });
-    }
-
-    this.props.isLogin(true);
+    }  
   };
 
   isDisabled = () => {
@@ -54,10 +52,10 @@ class Login extends Component {
 
   render() {
     const { email, password, error, isLogin } = this.state;
-
+    
     return (
       <Fragment>
-        {isLogin ? <AllPosts /> : (
+        {isLogin ? (<AllPosts /> && <Redirect to="/posts" />) : (
         <div className="login-form">
           <div className="logo">
             <i className="fa fa-camera" />
@@ -98,8 +96,8 @@ class Login extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const {users} = state.usersReducer;
-    return {users}
+  const { users } = state.usersReducer;
+  return { users };
 };
 
 const mapDispatchToProps = dispatch => ({

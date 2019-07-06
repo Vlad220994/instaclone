@@ -2,14 +2,14 @@ import {
   loadUsersStart,
   loadUsersSuccess,
   loadUsersError,
-  setUser
-} from "../actions/actionCreators";
-import UsersService from "../../services/getUsers";
+  setUser,
+} from '../actions/actionCreators';
+import UsersService from '../../services/getUsers';
 
 const usersService = new UsersService();
 
 export function loadUsers() {
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch(loadUsersStart());
 
     try {
@@ -24,7 +24,7 @@ export function loadUsers() {
 }
 
 export function addUser(newUser) {
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch(loadUsersStart());
 
     try {
@@ -32,16 +32,16 @@ export function addUser(newUser) {
         const users = usersService.getResource();
         const newUsers = [...newUser, ...users];
         dispatch(loadUsersSuccess(newUsers));
-        localStorage.setItem("usersData", JSON.stringify(newUsers));
+        localStorage.setItem('usersData', JSON.stringify(newUsers));
       }, 500);
     } catch (e) {
-        dispatch(loadUsersError(e));
+      dispatch(loadUsersError(e));
     }
-  }
+  };
 }
 
 export function removeUser(id) {
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch(loadUsersStart());
 
     try {
@@ -49,15 +49,20 @@ export function removeUser(id) {
         const users = usersService.getResource();
         const newUsers = users.filter(item => item.id !== id);
         dispatch(loadUsersSuccess(newUsers));
-        localStorage.setItem("usersData", JSON.stringify(newUsers));
+        localStorage.setItem('usersData', JSON.stringify(newUsers));
       }, 500);
     } catch (e) {
-        dispatch(loadUsersError(e));
+      dispatch(loadUsersError(e));
     }
-  }
+  };
 }
 
 export function setActiveUser(user) {
-    localStorage.setItem("activeUser", JSON.stringify(user));
-    return dispatch => dispatch(setUser(user))
+  localStorage.setItem('activeUser', JSON.stringify(user));
+  return dispatch => dispatch(setUser(user));
+}
+
+export function setDisactiveUser() {
+  localStorage.setItem('activeUser', JSON.stringify());
+  return dispatch => dispatch(setUser());
 }

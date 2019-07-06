@@ -1,10 +1,10 @@
-import React from "react";
-import "./spinner.scss";
+import React from 'react';
+import './spinner.scss';
 
 const Spinner = () => {
   const divStyle = {
-    position: "absolute",
-    left: "44%"
+    position: 'absolute',
+    left: '44%',
   };
 
   return (

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import {
-  Redirect,
   BrowserRouter as Router,
   Switch,
   Route,
@@ -21,11 +20,11 @@ class App extends Component {
     return (
       <Router history={history}>
         <Switch>
-          <Route path="/" component={AllPosts} exact />
+          <Route path="/" component={Login} exact />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/admin" component={AdminPage} />
-          <Route path="/posts" render={() => (isLogin ? <AllPosts /> : <Redirect to="/login" />)} />
+          <Route path="/posts" component={AllPosts} />
         </Switch>
       </Router>
     );

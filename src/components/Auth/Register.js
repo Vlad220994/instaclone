@@ -7,6 +7,7 @@ class Register extends Component {
   state = {
     first: "",
     last: "",
+    avatar: "",
     email: "",
     password: "",
     password2: "",
@@ -20,17 +21,18 @@ class Register extends Component {
   };
 
   isDisabled = () => {
-    const { first, last, email, password, password2 } = this.state;
-    return !(first && last && email && password && password2);
+    const { first, last, email, avatar, password, password2 } = this.state;
+    return !(first && last && email && avatar && password && password2);
   };
 
   handleSubmit = () => {
-    const { first, last, email, password } = this.state;
+    const { first, last, email, avatar, password } = this.state;
     const newUser = [
       {
         id: Math.floor(Math.random(0,1)*10000),
         firstName: first,
         lastName: last,
+        avatar: avatar,
         eMail: email,
         password: password,
         removeRequest: 0
@@ -42,6 +44,7 @@ class Register extends Component {
       {
         first: "",
         last: "",
+        avatar: "",
         email: "",
         password: "",
         password2: ""
@@ -50,7 +53,7 @@ class Register extends Component {
   };
 
   render() {
-    const { first, last, email, password, password2 } = this.state;
+    const { first, last, avatar, email, password, password2 } = this.state;
 
     return (
       <div className="register-form">
@@ -73,6 +76,13 @@ class Register extends Component {
             placeholder="Last Name"
             value={last}
             name="last"
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            placeholder="Avatar (Image URL)"
+            value={avatar}
+            name="avatar"
             onChange={this.handleChange}
           />
           <input

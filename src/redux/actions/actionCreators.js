@@ -5,52 +5,60 @@ import {
   USERS_LOAD_START,
   USERS_LOAD_SUCCESS,
   USERS_LOAD_ERROR,
-  SET_ACTIVE_USER
-} from "../constants/actionTypes";
+  SET_ACTIVE_USER,
+  SET_DISACTIVE_USER,
+} from '../constants/actionTypes';
 
 export function loadPostsStart() {
   return {
-    type: POSTS_LOAD_START
+    type: POSTS_LOAD_START,
   };
 }
 
 export function loadPostsSuccess(posts) {
   return {
     type: POSTS_LOAD_SUCCESS,
-    posts
+    posts,
   };
 }
 
 export function loadPostsError(error) {
   return {
     type: POSTS_LOAD_ERROR,
-    error
+    error,
   };
 }
 
 export function loadUsersStart() {
   return {
-    type: USERS_LOAD_START
+    type: USERS_LOAD_START,
   };
 }
 
 export function loadUsersSuccess(users) {
   return {
     type: USERS_LOAD_SUCCESS,
-    users
+    users,
   };
 }
 
 export function loadUsersError(error) {
   return {
     type: USERS_LOAD_ERROR,
-    error
+    error,
   };
 }
 
 export function setUser(user) {
-    return {
-        type: SET_ACTIVE_USER,
-        user
-    };
+  return {
+    type: SET_ACTIVE_USER,
+    user,
+  };
+}
+
+export function unsetUser(user) {
+  return {
+    type: SET_DISACTIVE_USER,
+    user,
+  };
 }
